@@ -1,0 +1,1353 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta name="google-site-verification" content="7Tau9WyVgxnsEY9oYedu9g0U6_8akOX3wiKbaYcrg9A" />
+  <meta name="baidu-site-verification" content="EVwLiaxdxX" />
+  <link href="/css/animsition.min.css" rel="stylesheet" type="text/css" />
+  <link href="/css/xps13.css" rel="stylesheet" type="text/css" />
+  <link href="/css/message.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+  <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Shiro,Java,Spring Boot," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MrBird" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/boy.png?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="FEBS是一个简单高效的后台权限管理系统。项目基础框架采用全新的Java Web开发框架 —— Spring Boot，消除了繁杂的XML配置，使得二次开发更为简单；数据访问层采用Mybatis，同时引入了通用Mapper和PageHelper插件，可快速高效的对单表进行增删改查操作，消除了大量传统XML配置SQL的代码；安全框架采用时下流行的Apache Shiro，可实现对按钮级别的权限控制；">
+<meta name="keywords" content="Shiro,Java,Spring Boot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于Spring Boot和Shiro的后台管理系统FEBS">
+<meta property="og:url" content="http://mrbird.cc/基于Spring-Boot和Shiro的后台管理系统FEBS.html">
+<meta property="og:site_name" content="MrBird">
+<meta property="og:description" content="FEBS是一个简单高效的后台权限管理系统。项目基础框架采用全新的Java Web开发框架 —— Spring Boot，消除了繁杂的XML配置，使得二次开发更为简单；数据访问层采用Mybatis，同时引入了通用Mapper和PageHelper插件，可快速高效的对单表进行增删改查操作，消除了大量传统XML配置SQL的代码；安全框架采用时下流行的Apache Shiro，可实现对按钮级别的权限控制；">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319141311.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319141358.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319141531.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319141602.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319141642.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319141722.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319141750.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319141940.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319103921.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319104022.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319104249.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319104347.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319104436.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319104529.png">
+<meta property="og:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319104634.png">
+<meta property="og:image" content="http://mrbird.cc/img/QQ截图20180328094628.png">
+<meta property="og:image" content="http://mrbird.cc/img/QQ截图20180328094917.png">
+<meta property="og:image" content="http://mrbird.cc/img/QQ截图20180328100233.png">
+<meta property="og:image" content="http://mrbird.cc/img/QQ图片20180328102425.png">
+<meta property="og:image" content="http://mrbird.cc/img/QQ截图20180328102554.png">
+<meta property="og:image" content="http://mrbird.cc/img/QQ截图20180328103002.png">
+<meta property="og:image" content="http://mrbird.cc/img/QQ截图20180328104654.png">
+<meta property="og:image" content="http://mrbird.cc/img/QQ截图20180328103153.png">
+<meta property="og:image" content="http://mrbird.cc/img/QQ截图20180328103944.png">
+<meta property="og:updated_time" content="2018-04-11T01:35:40.495Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于Spring Boot和Shiro的后台管理系统FEBS">
+<meta name="twitter:description" content="FEBS是一个简单高效的后台权限管理系统。项目基础框架采用全新的Java Web开发框架 —— Spring Boot，消除了繁杂的XML配置，使得二次开发更为简单；数据访问层采用Mybatis，同时引入了通用Mapper和PageHelper插件，可快速高效的对单表进行增删改查操作，消除了大量传统XML配置SQL的代码；安全框架采用时下流行的Apache Shiro，可实现对按钮级别的权限控制；">
+<meta name="twitter:image" content="http://mrbird.cc/img/FEBS/QQ截图20180319141311.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: false,
+    motion: false
+  };
+</script>
+
+
+
+
+
+
+
+  <title>基于Spring Boot和Shiro的后台管理系统FEBS | MrBird</title>
+</head>
+
+<body ondragstart="return false;" class="animsition" lang="zh-Hans" style="overflow-x: hidden;padding-right: 290px">
+<script type="text/javascript" src="/js/animsition.min.js"></script>
+ <script type="text/javascript" src="/js/mo.min.js"></script>
+<script>
+$("body").animsition({inClass:"fade-in",outClass:"fade-out",inDuration:300,outDuration:300,linkElement:".animsition-link",loading:true,loadingParentElement:"html",loadingClass:"line-scale-pulse-out",loadingInner:"",timeout:false,timeoutCountdown:50,onLoadEvent:true,browser:["animation-duration","-webkit-animation-duration"],overlay:false,overlayClass:"animsition-overlay-slide",overlayParentElement:"html",transition:function(url){window.location.href=url}});
+</script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" >
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+    <style>
+    	@font-face {font-family: 'Lucida_Handwritdf74cd7e117c83';
+    	src: url('//cdn.webfont.youziku.com/webfonts/nomal/97411/47284/59f029dff629d81194592a90.gif?r=57305183482');
+    	src: url('//cdn.webfont.youziku.com/webfonts/nomal/97411/47284/59f029dff629d81194592a90.gif?r=57305183482?#iefix') format('embedded-opentype'),     url('//cdn.webfont.youziku.com/webfonts/nomal/97411/47284/59f029dff629d81194592a90.bmp?r=57305183482') format('woff'),     url('//cdn.webfont.youziku.com/webfonts/nomal/97411/47284/59f029dff629d81194592a90.jpg?r=57305183482') format('truetype'),     url('//cdn.webfont.youziku.com/webfonts/nomal/97411/47284/59f029dff629d81194592a90.png#Lucida_Handwriting') format('svg');   }.cssdf74cd7e117c83{font-family: 'Lucida_Handwritdf74cd7e117c83';}
+    </style>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title cssdf74cd7e117c83">MrBird</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+			<li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <!--<i class="menu-item-icon fa fa-fw fa-home"></i> <br />-->
+            
+            HOME
+          </a>
+        </li>
+      
+        
+			<li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <!--<i class="menu-item-icon fa fa-fw fa-archive"></i> <br />-->
+            
+            ARCHIVES
+          </a>
+        </li>
+      
+        
+			<li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <!--<i class="menu-item-icon fa fa-fw fa-tags"></i> <br />-->
+            
+            TAGS
+          </a>
+        </li>
+      
+        
+			<li class="menu-item menu-item-music">
+          <a href="/music/" rel="section">
+            
+              <!--<i class="menu-item-icon fa fa-fw fa-music"></i> <br />-->
+            
+            MUSIC
+          </a>
+        </li>
+      
+	    <div class="sidebar-toggle" style="display:none">
+			<div class="sidebar-toggle-line-wrap">
+			  <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+			  <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+			  <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+			</div>
+		  </div>
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Search" spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://mrbird.cc/基于Spring-Boot和Shiro的后台管理系统FEBS.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MrBird">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/blogImage.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MrBird">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">基于Spring Boot和Shiro的后台管理系统FEBS</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-08T11:03:37+08:00">
+                2018-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+          <span>
+            
+          </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="http://111.230.157.133/febs" target="_blank" rel="external">FEBS</a>是一个简单高效的后台权限管理系统。项目基础框架采用全新的Java Web开发框架 —— Spring Boot，消除了繁杂的XML配置，使得二次开发更为简单；数据访问层采用Mybatis，同时引入了通用Mapper和PageHelper插件，可快速高效的对单表进行增删改查操作，消除了大量传统XML配置SQL的代码；安全框架采用时下流行的Apache Shiro，可实现对按钮级别的权限控制；前端页面使用Bootstrap构建，主题风格为Google最新设计语言Material Design，并提供多套配色以供选择。FEBS意指：Fast，Easy use，Beautiful和Safe🙄。
+<a id="more"></a></p>
+<h2 id="功能模块"><a href="#功能模块" class="headerlink" title="功能模块"></a>功能模块</h2><p>系统功能模块组成如下所示：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">├─系统管理</div><div class="line">│  ├─字典管理</div><div class="line">│  ├─用户管理</div><div class="line">│  ├─菜单管理</div><div class="line">│  ├─角色管理</div><div class="line">│  └─部门管理</div><div class="line">├─系统监控</div><div class="line">│  ├─在线用户</div><div class="line">│  └─系统日志</div><div class="line">├─任务调度</div><div class="line">│  ├─定时任务</div><div class="line">│  └─调度日志</div><div class="line">└─网络资源</div><div class="line">    ├─One一个</div><div class="line">    │  ├─散文</div><div class="line">    │  ├─绘画</div><div class="line">    │  └─语文</div><div class="line">    ├─天气查询</div><div class="line">    ├─影视资讯</div><div class="line">    │  ├─即将上映</div><div class="line">    │  └─正在热映</div><div class="line">    └─每日一文</div></pre></td></tr></table></figure></p>
+<h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><h3 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h3><ul>
+<li><p>基础框架：Spring Boot</p>
+</li>
+<li><p>持久层框架：MyBatis</p>
+</li>
+<li><p>安全框架：Apache Shiro</p>
+</li>
+<li><p>摸板引擎：Thymeleaf</p>
+</li>
+<li><p>数据库连接池：阿里巴巴Druid</p>
+</li>
+<li><p>缓存框架：Ehcache</p>
+</li>
+<li><p>日志打印：logback</p>
+</li>
+<li><p>其他：fastjson，poi，javacsv，quartz等。</p>
+</li>
+</ul>
+<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><ul>
+<li><p>基础框架：Bootstrap4</p>
+</li>
+<li><p>JavaScirpy框架：jQuery</p>
+</li>
+<li><p>消息组件：Bootstrap notify</p>
+</li>
+<li><p>提示框插件：SweetAlert2</p>
+</li>
+<li><p>树形插件：jsTree</p>
+</li>
+<li><p>树形表格插件：jqTreeGrid</p>
+</li>
+<li><p>表格插件：BootstrapTable</p>
+</li>
+<li><p>表单校验插件：jQuery-validate</p>
+</li>
+<li><p>多选下拉框插件：multiple-select</p>
+</li>
+<li><p>图表插件：Highcharts</p>
+</li>
+</ul>
+<h3 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h3><ul>
+<li><p>语言：Java</p>
+</li>
+<li><p>IDE：Eclipse Oxygen</p>
+</li>
+<li><p>依赖管理：Maven</p>
+</li>
+<li><p>数据库：Oracle 11g &amp; MySQL 5.7</p>
+</li>
+<li><p>版本管理：SVN，git</p>
+</li>
+</ul>
+<h2 id="系统预览"><a href="#系统预览" class="headerlink" title="系统预览"></a>系统预览</h2><p><img src="img/FEBS/QQ截图20180319141311.png" alt="QQ截图20180319141311.png"></p>
+<p><img src="img/FEBS/QQ截图20180319141358.png" alt="QQ截图20180319141358.png"></p>
+<p><img src="img/FEBS/QQ截图20180319141531.png" alt="QQ截图20180319141531.png"></p>
+<p><img src="img/FEBS/QQ截图20180319141602.png" alt="QQ截图20180319141602.png"></p>
+<p><img src="img/FEBS/QQ截图20180319141642.png" alt="QQ截图20180319141642.png"></p>
+<p><img src="img/FEBS/QQ截图20180319141722.png" alt="QQ截图20180319141722.png"></p>
+<p><img src="img/FEBS/QQ截图20180319141750.png" alt="QQ截图20180319141750.png"></p>
+<p><img src="img/FEBS/QQ截图20180319141940.png" alt="QQ截图20180319141940.png"></p>
+<h2 id="主题预览"><a href="#主题预览" class="headerlink" title="主题预览"></a>主题预览</h2><p><img src="img/FEBS/QQ截图20180319103921.png" alt="QQ截图20180319103921.png"></p>
+<p><img src="img/FEBS/QQ截图20180319104022.png" alt="QQ截图20180319104022.png"></p>
+<p><img src="img/FEBS/QQ截图20180319104249.png" alt="QQ截图20180319104249.png"></p>
+<p><img src="img/FEBS/QQ截图20180319104347.png" alt="QQ截图20180319104347.png"></p>
+<p><img src="img/FEBS/QQ截图20180319104436.png" alt="QQ截图20180319104436.png"></p>
+<p><img src="img/FEBS/QQ截图20180319104529.png" alt="QQ截图20180319104529.png"></p>
+<p><img src="img/FEBS/QQ截图20180319104634.png" alt="QQ截图20180319104634.png"></p>
+<h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><p>码云：</p>
+<script src="https://gitee.com/github-16661027/project/widget_preview"></script>
+
+<style>
+.pro_name a{color: #00cc88;}
+.osc_git_title{background-color: #fff;}
+.osc_git_box{background-color: #fff;}
+.osc_git_box{border-color: #E3E9ED;}
+.osc_git_info{color: #666;}
+.osc_git_main a{color: #9B9B9B;}
+.osc_git_title h3:before {
+    display: none !important;
+}
+</style>
+
+<p>GitHub：</p>
+<div style="text-align:center">
+  <div class="github-card" data-user="wuyouzhuguli" data-repo="FEBS" data-width="100%" data-theme="default" data-target="" data-client-id="" data-client-secret=""></div>
+</div>
+<script src="/github-card-lib/githubcard.js"></script>
+
+<p><style>
+.github-card {
+    border-radius: 2px !important;
+}
+.repo-card .content p {
+    font-size: .9rem !important;
+}
+</style>
+下载后以maven项目导入。</p>
+<p>开发时直接使用Spring Boot的入口类启动即可，访问地址<a href="localhost">localhost</a>。部署时建议打包成war包，访问地址<a href="localhost:端口号/febs" target="_blank" rel="external">localhost:端口号/febs</a>。账号mrbird，密码123456。</p>
+<p>本软件使用 <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="external">Apache License 2.0</a> 协议，请严格遵照协议内容。</p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="如何下载代码"><a href="#如何下载代码" class="headerlink" title="如何下载代码"></a>如何下载代码</h3><p><strong>手动下载</strong></p>
+<p>下载Oracle版本：</p>
+<p>分支选择master，然后点击 download zip即可，如下图所示：</p>
+<p><img src="img/QQ截图20180328094628.png" alt="QQ截图20180328094628.png"></p>
+<p>下载MySQL版本：</p>
+<p>分支选择mysql，然后点击 download zip即可，如下图所示：</p>
+<p><img src="img/QQ截图20180328094917.png" alt="QQ截图20180328094917.png"></p>
+<p><strong>Git命令</strong></p>
+<p>下载oracle版本：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/wuyouzhuguli/FEBS.git</div></pre></td></tr></table></figure></p>
+<p>下载mysql版本：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> -b mysql https://github.com/wuyouzhuguli/FEBS.git</div></pre></td></tr></table></figure></p>
+<h3 id="Servlet依赖问题"><a href="#Servlet依赖问题" class="headerlink" title="Servlet依赖问题"></a>Servlet依赖问题</h3><p>启动项目后报Servlet依赖未找到，比如：
+<div class="note danger"><p>Post-processing of merged bean definition failed; nested exception is java.lang.NoClassDefFoundError: javax/servlet/ServletRequest</p>
+</div>
+出现这个问题一般是使用IDEA的同学，解决办法：打开pom文件，然后下图中的<code>&lt;scope&gt;provided&lt;/scope&gt;</code>去掉：</p>
+<p><img src="img/QQ截图20180328100233.png" alt="QQ截图20180328100233.png"></p>
+<h3 id="表不存在"><a href="#表不存在" class="headerlink" title="表不存在"></a>表不存在</h3><p>这个问题一般出现在Linux环境下的MySQL数据库中，Linux下的MySQL数据库默认开启了大小写敏感，即<code>t_user</code>和<code>T_USER</code>是两个完全不同的表。解决办法：</p>
+<ol>
+<li><p>将代码中的表名大小写改为和数据库一致（不推荐！繁琐又容易出错）；</p>
+</li>
+<li><p>关闭MySQL大小写敏感，可参考：<a href="https://blog.csdn.net/fdipzone/article/details/73692929" target="_blank" rel="external">https://blog.csdn.net/fdipzone/article/details/73692929</a>。</p>
+</li>
+</ol>
+<h3 id="Oracle驱动依赖问题"><a href="#Oracle驱动依赖问题" class="headerlink" title="Oracle驱动依赖问题"></a>Oracle驱动依赖问题</h3><p>以ojdbc6为例，由于版权的原因，我们需要将ojdbc6.jar依赖安装到本地的maven仓库，然后才可以在pom中进行配置。</p>
+<p>下载ojdbc6.jar文件后，将其放到比较好找的目录下，比如D盘根目录。然后运行以下命令：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">C:\Users\Administrator&gt;mvn install:install-file -Dfile=D:/ojdbc6.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=6.0 -</div><div class="line">Dpackaging=jar -DgeneratePom=<span class="literal">true</span></div><div class="line">...</div><div class="line">[INFO] --- maven-install-plugin:2.4:install-file (default-cli) @ standalone-pom ---</div><div class="line">[INFO] Installing D:\ojdbc6.jar to D:\m2\repository\com\oracle\ojdbc6\6.0\ojdbc6-6.0.jar</div><div class="line">[INFO] Installing C:\Users\ADMINI~1\AppData\Local\Temp\mvninstall9103688544010617483.pom to D:\m2\repository\com\oracle\ojdbc</div><div class="line">6\6.0\ojdbc6-6.0.pom</div><div class="line">[INFO] ------------------------------------------------------------------------</div><div class="line">[INFO] BUILD SUCCESS</div><div class="line">[INFO] ------------------------------------------------------------------------</div><div class="line">[INFO] Total time: 0.940 s</div><div class="line">[INFO] Finished at: 2017-08-13T15:06:38+08:00</div><div class="line">[INFO] Final Memory: 6M/145M</div><div class="line">[INFO] ------------------------------------------------------------------------</div></pre></td></tr></table></figure></p>
+<p>接着在pom中引入：
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.oracle<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>ojdbc6<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>6.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>这里的groupid就是你之前安装时指定的-Dgroupid的值，artifactid就是你安装时指定的-Dartifactid的值，version也一样。</p>
+<h3 id="war包部署"><a href="#war包部署" class="headerlink" title="war包部署"></a>war包部署</h3><p>项目默认打包为war，以eclipse为例，右键项目选择Run As → Maven build…：
+<img src="img/QQ图片20180328102425.png" alt="QQ图片20180328102425.png"> </p>
+<p>输入命令<code>clean package</code>后点击Run按钮即可：
+<img src="img/QQ截图20180328102554.png" alt="QQ截图20180328102554.png"></p>
+<p>当控制台提示成功后，刷新项目便可在target目录下找到打包好的war包：</p>
+<p><img src="img/QQ截图20180328103002.png" alt="QQ截图20180328103002.png"></p>
+<p>war包的名称是由pom中的<code>&lt;finalName&gt;febs&lt;/finalName&gt;</code>配置决定的。</p>
+<h3 id="jar包部署"><a href="#jar包部署" class="headerlink" title="jar包部署"></a>jar包部署</h3><p>将pom中的打包方式改为jar：
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cc.mrbird<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>project<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-snapshot<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>如果改完项目出了红叉，可以运行<code>maven update</code>；</p>
+<p><img src="img/QQ截图20180328104654.png" alt="QQ截图20180328104654.png"></p>
+<p>然后将下图中的Tomcat依赖去掉，因为Spring Boot内置了Tomcat依赖：</p>
+<p><img src="img/QQ截图20180328103153.png" alt="QQ截图20180328103153.png"></p>
+<p>最后找到<code>ServletInitializer</code>将其注释掉即可。</p>
+<p>同样的运行<code>clean package</code>命令后刷新项目便可在target目录下找到打包好的jar包：</p>
+<p><img src="img/QQ截图20180328103944.png" alt="QQ截图20180328103944.png"></p>
+
+      
+      <script>
+        $(".post-body a").not('.thispage').addClass("ignore-href").attr("target","_blank");
+      </script>
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Shiro/" rel="tag"># Shiro</a>
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Spring-Boot/" rel="tag"># Spring Boot</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/树形插件jsTree.html" rel="next" title="树形插件jsTree">
+                <i class="fa fa-chevron-left"></i> 树形插件jsTree
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/腾讯云部署Java-Web项目小记.html" rel="prev" title="腾讯云部署Java Web项目小记">
+                腾讯云部署Java Web项目小记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+  <hr>
+
+    <div id="container"></div>
+    <div class="post-spread">
+      
+      
+      
+        <div id="comment-div"></div>
+        <style>
+        	.valine .vwrap .vcontrol .col.col-60 {
+			   text-align: left;
+			}
+			.valine .vlist .vcard .vhead, .valine .vlist .vcard section .vfooter {
+				text-align: left;
+			}
+			.valine .vlist .vcard section {
+				padding-bottom: 0.5rem !important;
+			}
+			.vname {
+				color: #42b983 !important;
+			}
+			.valine .vinfo .col {
+				text-align: left;
+    			margin-left: -27rem;
+			}
+			div#comment-div {
+			    margin-bottom: -8rem;
+			}
+			.valine .vlist .vcard .vcontent .code, .valine .vlist .vcard .vcontent code, .valine .vlist .vcard .vcontent pre {
+				background: #fbfbfb;
+			}
+			.valine .vlist .vcard .vcontent a {
+				color: #42b983;
+			}
+			.valine .vlist .vcard .vimg {
+				border-radius: 3px;
+			}
+			.valine .vbtn {
+				border-radius: 2px;
+				padding: .3rem 1.25rem;
+			}
+			.valine .vbtn:active,.valine .vbtn:hover {
+				color: #42b983;
+				border-color: #42b983;
+				background-color: #fff
+			}
+			.valine .vwrap .vheader .vinput:focus {
+				border-bottom-color: #42b983;
+			}
+			.valine .vlist .vcard .vcontent.expand:before {
+				background: -webkit-gradient(linear,left top,left bottom,from(hsla(0,0%,100%,0)),to(hsla(0,0%,100%,.2)));
+				background: linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.2))
+			}
+
+			.valine .vlist .vcard .vcontent.expand:after {
+				content: "点击展开";
+				font-size: .4rem;
+				text-align: right;				
+				left: -1rem;
+				background: hsla(0,0%,100%,.2)
+			}
+			.valine .vlist .vcard section .vfooter .vat {
+				color: #b3b3b3;
+			}
+			.valine .vlist .vcard section .vfooter .vat:hover {
+				color: #42b983;
+			}
+			.vcontent img {
+				margin: 0px;
+			}
+			.valine .info {
+				display: none;
+			}
+        </style>
+        <script type="text/javascript" src="/js/av.min.js"></script>
+        <script type="text/javascript" src="/js/Valine.min.js"></script>
+    	<script>
+    	new Valine({
+		    el: '#comment-div' ,
+		    notify: true, 
+		    verify: true, 
+		    appId: 'SMcDFP1bN1jgb9Lo8JmtICHm-gzGzoHsz',
+		    appKey: 'dH4nrUrt3V5XiJiI6Qyejnbi',
+		    placeholder: '',
+		    path: window.location.pathname, 
+		    avatar: 'monsterid',
+		    guest_info:  ['nick','mail','link']
+		});
+		</script>
+      
+    </div>
+  </div>
+  <script>
+  	var $bqinline = $("img[alt='bq-inline']");
+  	$bqinline.css({"width":"2.3rem","height":"2.3rem","display":"inline","vertical-align":"text-bottom"});
+  </script>
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+
+
+
+  <aside id="sidebar" class="sidebar" onselectstart="return false">
+    
+	<div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Site Preview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+	  <!--
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/blogImage.jpg"
+               alt="MrBird" />
+          <p class="site-author-name" itemprop="name">MrBird</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">198</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-star"></i>
+              Friends
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://32mb.space" title="32 space" target="_blank">32 space</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.leanote.com/jint" title="jint" target="_blank">jint</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ltsc.leanote.com" title="ltcs" target="_blank">ltcs</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.leanote.com/althars" title="Althars" target="_blank">Althars</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://libisky.com" title="libisky" target="_blank">libisky</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://hao.iyangqiong.com" title="HaoWeb网址导航" target="_blank">HaoWeb网址导航</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+		 -->
+		
+		<div class="sidebar-sticky sticky">
+		  <div itemscope="" itemtype="http://schema.org/Person">
+			<div class="author__avatar">
+			  <img src="/images/blogImage.jpg" class="author__avatar" alt="MrBird" itemprop="image"></div>
+			<div class="author__content">
+			  <h3 class="author__name" itemprop="name">MrBird's Blog</h3>
+			  <p class="author__bio" itemprop="description">A simple blog, code repository, just keep blogging</p></div>
+			<div class="author__urls-wrapper">
+			  <button class="btn btn--inverse">Follow</button>
+			  <ul class="author__urls social-icons">
+				<li>
+				  <a href="http://map.baidu.com/?newmap=1&s=s%26wd%3D%E7%A6%8F%E5%B7%9E%E5%B8%82%26c%3D300&from=alamap&tpl=mapcity" target="_blank" itemprop="url" class="ignore-href">
+					<i class="fa fa-fw fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;FuZhou,CN</a>
+				</li>  
+				<li>
+				  <a href="http://mrbird.leanote.com" target="_blank" itemprop="url" class="ignore-href">
+					<i class="fa fa-fw fa-chain" aria-hidden="true"></i>&nbsp;&nbsp;Website</a>
+				</li>
+				<li>
+				  <a href="/atom.xml" target="_blank" itemprop="url" class="ignore-href">
+					<i class="fa fa-fw fa-rss" aria-hidden="true"></i>&nbsp;&nbsp;RSS</a>
+				</li>
+				<li>
+				  <a href="/images/wechat.png" target="_blank" itemprop="sameAs" class="ignore-href">
+					<i class="fa fa-fw fa-weixin" aria-hidden="true"></i>&nbsp;&nbsp;WeChat</a>
+				</li>
+				<li>
+				  <a href="https://www.facebook.com/mrbirdleanote" target="_blank" itemprop="sameAs" class="ignore-href">
+					<i class="fa fa-fw fa-facebook-square" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a>
+				</li>
+				<li>
+				  <a href="http://weibo.com/mrbird123" target="_blank" itemprop="sameAs" class="ignore-href">
+					<i class="fa fa-fw fa-weibo" aria-hidden="true"></i>&nbsp;&nbsp;Weibo</a>
+				</li>
+				<li>
+				  <a href="https://github.com/wuyouzhuguli" target="_blank" itemprop="sameAs" class="ignore-href">
+					<i class="fa fa-fw fa-github-alt" aria-hidden="true"></i>&nbsp;&nbsp;GitHub</a>
+				</li>
+         <li>
+            <a href="javascript:;" class="popup-trigger">
+            <i class="fa fa-fw fa-search" aria-hidden="true"></i>&nbsp;&nbsp;Search
+          </a>
+        </li>
+				<!-- <li>
+				<a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+				<i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+				</a>
+				</li>
+				-->
+			  </ul>
+			</div>
+		  </div>
+		</div>
+		<script>
+var $urls=$(".author__urls").find("a");$urls.each(function(){var $a=$(this);$a.mouseenter(function(){$a.css({"color":"#414547"})});$a.mouseleave(function(){$a.css({"color":""})})});
+    </script>
+      </section>
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active" style="padding-right:20px;">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#功能模块"><span class="nav-number">1.</span> <span class="nav-text">功能模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技术选型"><span class="nav-number">2.</span> <span class="nav-text">技术选型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#后端"><span class="nav-number">2.1.</span> <span class="nav-text">后端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端"><span class="nav-number">2.2.</span> <span class="nav-text">前端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发环境"><span class="nav-number">2.3.</span> <span class="nav-text">开发环境</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统预览"><span class="nav-number">3.</span> <span class="nav-text">系统预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题预览"><span class="nav-number">4.</span> <span class="nav-text">主题预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载地址"><span class="nav-number">5.</span> <span class="nav-text">下载地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见问题"><span class="nav-number">6.</span> <span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何下载代码"><span class="nav-number">6.1.</span> <span class="nav-text">如何下载代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Servlet依赖问题"><span class="nav-number">6.2.</span> <span class="nav-text">Servlet依赖问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表不存在"><span class="nav-number">6.3.</span> <span class="nav-text">表不存在</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Oracle驱动依赖问题"><span class="nav-number">6.4.</span> <span class="nav-text">Oracle驱动依赖问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#war包部署"><span class="nav-number">6.5.</span> <span class="nav-text">war包部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jar包部署"><span class="nav-number">6.6.</span> <span class="nav-text">jar包部署</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+	<!--
+	 -->
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer" onselectstart="return false">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>&nbsp;&nbsp;
+ 
+  <span class="author" itemprop="copyrightHolder">MrBird</span>
+</div>
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <span style="font-family: 'Source Sans Pro','Helvetica Neue',Arial,sans-serif;font-size:1.2em;font-weight:600;">TOP</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (search_path.endsWith("json")) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      debugger;
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+<script>
+  $(function(){$("a").not(".nav-link,.cloud-tie-join-count,.ignore-href,.jstree-anchor").addClass("animsition-link");});var burst1 = new mojs.Burst({left: 0, top: 0,radius: { 5: 40 },children: {shape: 'circle',fill: ['red', 'cyan', 'orange' ],fillOpacity: .8,radiusX: 3.5,radiusY: 3.5}});document.addEventListener('click', function (e) {if(e.target.href != null || e.target.className=='footer' || e.target.className=='copyright' || e.target.className=='author__urls social-icons' || e.target.className=='author__avatar' || e.target.className=='sidebar sidebar-active') return; burst1.tune({ x: e.pageX, y: e.pageY }).generate().replay();});
+
+</script>
+<script type="text/javascript" src="/js/message.js"></script>
+</html>
