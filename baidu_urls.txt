@@ -1,23 +1,23 @@
 http://mrbird.cc/Spring-Boot-Swagger2-RESTful-API.html
-http://mrbird.cc/Spring-Boot中编写单元测试.html
-http://mrbird.cc/Spring-Boot中的JSON技术.html
-http://mrbird.cc/使用Jsoup防御XSS攻击.html
-http://mrbird.cc/腾讯云部署Java-Web项目小记.html
-http://mrbird.cc/基于Spring-Boot和Shiro的后台管理系统FEBS.html
+http://mrbird.cc/Spring-Boot TESTing.html
+http://mrbird.cc/Spring-Boot JSON.html
+http://mrbird.cc/Jsoup XSS.html
+http://mrbird.cc/tecent cloud Java-Web.html
+http://mrbird.cc/Spring-Boot Shiro FEBS.html
 http://mrbird.cc/树形插件jsTree.html
-http://mrbird.cc/jQuery-Validate表单校验插件.html
-http://mrbird.cc/树形表格插件jQuery-TreeGrid.html
-http://mrbird.cc/Bootstrap-Table学习指南.html
-http://mrbird.cc/Linux下部署Spring-Boot-jar.html
-http://mrbird.cc/Spring-Boot-logback日志配置.html
-http://mrbird.cc/Bootstrap-Modal遮罩问题.html
-http://mrbird.cc/MyBatis通用Mapper和PageHelper.html
-http://mrbird.cc/Spring-Boot-Shiro在线会话管理.html
-http://mrbird.cc/Spring-Boot-Themeleaf中使用Shiro标签.html
+http://mrbird.cc/jQuery-Validate.html
+http://mrbird.cc/jQuery-TreeGrid.html
+http://mrbird.cc/Bootstrap-Table guide.html
+http://mrbird.cc/Linux Spring-Boot-jar.html
+http://mrbird.cc/Spring-Boot-logback.html
+http://mrbird.cc/Bootstrap-Moda error.html
+http://mrbird.cc/MyBatis common Mapper PageHelper.html
+http://mrbird.cc/Spring-Boot-Shiro session.html
+http://mrbird.cc/Spring-Boot-Themeleaf Shiro tag.html
 http://mrbird.cc/Spring-Boot-Shiro cache.html
-http://mrbird.cc/Spring-Boot-Shiro权限控制.html
+http://mrbird.cc/Spring-Boot-Shiro Authorization.html
 http://mrbird.cc/Spring-Boot-Shiro Remember-Me.html
-http://mrbird.cc/Spring-Boot-shiro用户认证.html
+http://mrbird.cc/Spring-Boot-shiro Authentication.html
 http://mrbird.cc/Apache Shiro简介.html
 http://mrbird.cc/Spring-Boot war.html
 http://mrbird.cc/Spring-Boot cache.html
@@ -43,13 +43,13 @@ http://mrbird.cc/Thymeleaf-表达式工具类.html
 http://mrbird.cc/Thymeleaf-Standard-Expression-Syntax.html
 http://mrbird.cc/自定义annotation.html
 http://mrbird.cc/CSV读写.html
-http://mrbird.cc/Spring-Boot-AOP记录用户操作日志.html
-http://mrbird.cc/美团外卖开发总结.html
-http://mrbird.cc/Spring-Boot-MyBatis配置Druid多数据源.html
-http://mrbird.cc/Spring-Boot-JdbcTemplate配置Druid多数据源.html
-http://mrbird.cc/Spring-Boot中使用JdbcTemplate.html
-http://mrbird.cc/Spring-Boot中使用Mybatis.html
-http://mrbird.cc/Spring-Boot一些基础配置.html
+http://mrbird.cc/Spring-Boot-AOP log.html
+http://mrbird.cc/meituan waimai.html
+http://mrbird.cc/Spring-Boot-MyBatis Druid.html
+http://mrbird.cc/Spring-Boot-JdbcTemplate Druid.html
+http://mrbird.cc/Spring-Boot JdbcTemplate.html
+http://mrbird.cc/Spring-Boot Mybatis.html
+http://mrbird.cc/Spring-Boot basic config.html
 http://mrbird.cc/开启Spring-Boot.html
 http://mrbird.cc/Spring-Tymeleaf3国际化.html
 http://mrbird.cc/Spring4中配置Thymeleaf3视图.html
