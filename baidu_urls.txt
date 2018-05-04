@@ -1,4 +1,4 @@
-http://mrbird.cc/Spring-Boot整合Swagger2构建RESTful-API.html
+http://mrbird.cc/Spring-Boot-Swagger2-RESTful-API.html
 http://mrbird.cc/Spring-Boot中编写单元测试.html
 http://mrbird.cc/Spring-Boot中的JSON技术.html
 http://mrbird.cc/使用Jsoup防御XSS攻击.html
