@@ -19,21 +19,21 @@ http://mrbird.cc/Spring-Boot-Shiro权限控制.html
 http://mrbird.cc/Spring-Boot-Shiro Remember-Me.html
 http://mrbird.cc/Spring-Boot-shiro用户认证.html
 http://mrbird.cc/Apache Shiro简介.html
-http://mrbird.cc/Spring-Boot项目打包成war包.html
-http://mrbird.cc/Spring-Boot中使用缓存.html
+http://mrbird.cc/Spring-Boot war.html
+http://mrbird.cc/Spring-Boot cache.html
 http://mrbird.cc/Oracle-Merge语句.html
-http://mrbird.cc/oracle分析函数（窗口函数）.html
+http://mrbird.cc/oracle Window function.html
 http://mrbird.cc/Oracle-Object-Type.html
 http://mrbird.cc/Oracle程序包.html
 http://mrbird.cc/Oracle触发器.html
-http://mrbird.cc/Oracle-存储过程和函数.html
+http://mrbird.cc/Oracle Stored procedure function.html
 http://mrbird.cc/Oracle-PL-SQL编程.html
 http://mrbird.cc/Oracle-SQLPlus命令.html
 http://mrbird.cc/Nginx-rewrite.html
 http://mrbird.cc/Nginx-upstream.html
 http://mrbird.cc/Nginx-Gzip压缩.html
-http://mrbird.cc/Nginx的基本配置.html
-http://mrbird.cc/Nginx安装与部署.html
+http://mrbird.cc/Nginx basic config.html
+http://mrbird.cc/Nginx install deploy.html
 http://mrbird.cc/Spring-Boot使用thymeleaf.html
 http://mrbird.cc/Thymeleaf-局部变量.html
 http://mrbird.cc/Thymeleaf-模板布局.html
