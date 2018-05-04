@@ -2852,7 +2852,7 @@ function renderHeader(_ref, instance) {
     return reaction.content === 'heart' && reaction.user.login === user.login;
   });
   likeButton.className = 'gitment-header-like-btn';
-  likeButton.innerHTML = '\n    ' + _icons.heart + '\n    ' + (likedReaction ? 'Unlike' : 'Like') + '\n    ' + (meta.reactions && meta.reactions.heart ? ' \u2022 <strong>' + meta.reactions.heart + '</strong> Liked' : '') + '\n  ';
+  likeButton.innerHTML = '\n    ' + _icons.heart + '\n    ' + (likedReaction ? '取消赞' : '点个赞') + '\n    ' + (meta.reactions && meta.reactions.heart ? ' \u2022 <strong style="color:#6190e8">' + meta.reactions.heart + '</strong> 个赞' : '') + '\n  ';
 
   if (likedReaction) {
     likeButton.classList.add('liked');
@@ -2868,7 +2868,7 @@ function renderHeader(_ref, instance) {
   container.appendChild(likeButton);
 
   var commentsCount = document.createElement('span');
-  commentsCount.innerHTML = '\n    ' + (meta.comments ? ' \u2022 <strong>' + meta.comments + '</strong> Comments' : '') + '\n  ';
+  commentsCount.innerHTML = '\n    ' + (meta.comments ? ' \u2022 <strong style="color:#6190e8">' + meta.comments + '</strong> 条评论' : '') + '\n  ';
   container.appendChild(commentsCount);
 
   var issueLink = document.createElement('a');
@@ -2911,7 +2911,7 @@ function renderComments(_ref2, instance) {
                 html: true,
                 allowEscapeKey: true,
                 allowOutsideClick: true,
-                confirmButtonText: 'Cancel',
+                confirmButtonText: '关闭',
                 confirmButtonColor: '#66CC99'
             });
         });
@@ -2933,7 +2933,7 @@ function renderComments(_ref2, instance) {
   } else if (!comments.length) {
     var emptyBlock = document.createElement('div');
     emptyBlock.className = 'gitment-comments-empty';
-    emptyBlock.innerText = 'No Comment Yet';
+    emptyBlock.innerText = '暂无评论哦...';
     container.appendChild(emptyBlock);
     return container;
   }
@@ -3046,8 +3046,8 @@ function renderEditor(_ref3, instance) {
   container.className = 'gitment-container gitment-editor-container';
 
   var shouldDisable = user.login && !error ? '' : 'disabled';
-  var disabledTip = user.login ? '' : 'Login to Comment';
-  container.innerHTML = '\n      ' + (user.login ? '<a class="gitment-editor-avatar" href="' + user.html_url + '" target="_blank">\n            <img class="gitment-editor-avatar-img" src="' + user.avatar_url + '"/>\n          </a>' : user.isLoggingIn ? '<div class="gitment-editor-avatar">' + _icons.spinner + '</div>' : '<a class="gitment-editor-avatar" href="' + instance.loginLink + '" title="login with GitHub">\n              ' + _icons.github + '\n            </a>') + '\n    </a>\n    <div class="gitment-editor-main">\n      <div class="gitment-editor-header">\n        <nav class="gitment-editor-tabs">\n          <button class="gitment-editor-tab gitment-selected">Write</button>\n          <button class="gitment-editor-tab">Preview</button>\n        </nav>\n        <div class="gitment-editor-login">\n          ' + (user.login ? '<a class="gitment-editor-logout-link">Logout</a>' : user.isLoggingIn ? 'Logging in...' : '<a class="gitment-editor-login-link" href="' + instance.loginLink + '">Login</a> with GitHub') + '\n        </div>\n      </div>\n      <div class="gitment-editor-body">\n        <div class="gitment-editor-write-field">\n          <textarea placeholder="Leave a comment" title="' + disabledTip + '" ' + shouldDisable + '></textarea>\n        </div>\n        <div class="gitment-editor-preview-field gitment-hidden">\n          <div class="gitment-editor-preview gitment-markdown"></div>\n        </div>\n      </div>\n    </div>\n    <div class="gitment-editor-footer">\n      <a class="gitment-editor-footer-tip" href="https://guides.github.com/features/mastering-markdown/" target="_blank">\n        Styling with Markdown is supported\n      </a>\n      <button class="gitment-editor-submit" title="' + disabledTip + '" ' + shouldDisable + '>Comment</button>\n    </div>\n  ';
+  var disabledTip = user.login ? '' : '请先登录GitHub🙃';
+  container.innerHTML = '\n      ' + (user.login ? '<a class="gitment-editor-avatar" href="' + user.html_url + '" target="_blank">\n            <img class="gitment-editor-avatar-img" src="' + user.avatar_url + '"/>\n          </a>' : user.isLoggingIn ? '<div class="gitment-editor-avatar">' + _icons.spinner + '</div>' : '<a class="gitment-editor-avatar" href="' + instance.loginLink + '" title="login with GitHub">\n              ' + _icons.github + '\n            </a>') + '\n    </a>\n    <div class="gitment-editor-main">\n      <div class="gitment-editor-header">\n        <nav class="gitment-editor-tabs">\n          <button class="gitment-editor-tab gitment-selected">内容</button>\n          <button class="gitment-editor-tab">预览</button>\n        </nav>\n        <div class="gitment-editor-login">\n          ' + (user.login ? '<a class="gitment-editor-logout-link">Logout</a>' : user.isLoggingIn ? 'Logging in...' : '使用GitHub<a class="gitment-editor-login-link" href="' + instance.loginLink + '">登录</a>') + '\n        </div>\n      </div>\n      <div class="gitment-editor-body">\n        <div class="gitment-editor-write-field">\n          <textarea placeholder="支持MarkDown语法" title="' + disabledTip + '" ' + shouldDisable + '></textarea>\n        </div>\n        <div class="gitment-editor-preview-field gitment-hidden">\n          <div class="gitment-editor-preview gitment-markdown"></div>\n        </div>\n      </div>\n    </div>\n    <div class="gitment-editor-footer">\n       <button class="gitment-editor-submit" title="' + disabledTip + '" ' + shouldDisable + '>发送评论</button>\n    </div>\n  ';
   if (user.login) {
     container.querySelector('.gitment-editor-logout-link').onclick = function () {
       return instance.logout();
@@ -3091,7 +3091,7 @@ function renderEditor(_ref3, instance) {
     var preview = previewField.querySelector('.gitment-editor-preview');
     var content = textarea.value.trim();
     if (!content) {
-      preview.innerText = 'Nothing to preview';
+      preview.innerText = '暂无内容';
       return;
     }
 
@@ -3117,7 +3117,7 @@ function renderEditor(_ref3, instance) {
             html: true,
             allowEscapeKey: true,
             allowOutsideClick: true,
-            confirmButtonText: 'Cancel',
+            confirmButtonText: '关闭',
             confirmButtonColor: '#66CC99'
         });
       submitButton.removeAttribute('disabled');
@@ -3132,7 +3132,7 @@ function renderFooter() {
   var container = document.createElement('div');
   container.lang = "en-US";
   container.className = 'gitment-container gitment-footer-container';
-  container.innerHTML = '\n    Powered by\n    <a class="gitment-footer-project-link" href="https://github.com/imsun/gitment" target="_blank">\n      Gitment\n    </a>\n  ';
+  container.innerHTML = '';
   return container;
 }
 
@@ -3444,7 +3444,7 @@ var Gitment = function () {
             html: true,
             allowEscapeKey: true,
             allowOutsideClick: true,
-            confirmButtonText: 'Cancel',
+            confirmButtonText: '关闭',
             confirmButtonColor: '#66CC99'
         });
       });
@@ -3668,11 +3668,11 @@ var Gitment = function () {
       if (!this.accessToken) {
          swal({
                 title: "",
-                text: "<span style=\"font-size:1.45rem;font-weight:600;font-family:'.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;\">Login to like</span>",
+                text: "<span style=\"font-size:1.45rem;font-weight:600;font-family:'.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;\">请先登录GitHub🙃</span>",
                 html: true,
                 allowEscapeKey: true,
                 allowOutsideClick: true,
-                confirmButtonText: 'Cancel',
+                confirmButtonText: '关闭',
                 confirmButtonColor: '#66CC99'
             });
         return Promise.reject();
@@ -3716,11 +3716,11 @@ var Gitment = function () {
       if (!this.accessToken) {
         swal({
                 title: "",
-                text: "<span style=\"font-size:1.45rem;font-weight:600;font-family:'.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;\">Login to like</span>",
+                text: "<span style=\"font-size:1.45rem;font-weight:600;font-family:'.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;\">请先登录GitHub🙃</span>",
                 html: true,
                 allowEscapeKey: true,
                 allowOutsideClick: true,
-                confirmButtonText: 'Cancel',
+                confirmButtonText: '关闭',
                 confirmButtonColor: '#66CC99'
             });
         return Promise.reject();
