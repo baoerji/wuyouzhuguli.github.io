@@ -3103,7 +3103,19 @@ function renderEditor(_ref3, instance) {
 
   var submitButton = container.querySelector('.gitment-editor-submit');
   submitButton.onclick = function () {
-    submitButton.innerText = 'Submitting...';
+    if(textarea.value.trim().length==0){
+        swal({
+            title: "",
+            text: "<span style=\"font-size:1.45rem;font-weight:600;font-family:'.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;\">好歹写点啥吧👀</span>",
+            html: true,
+            allowEscapeKey: true,
+            allowOutsideClick: true,
+            confirmButtonText: '关闭',
+            confirmButtonColor: '#66CC99'
+        });
+        return;
+    }
+    submitButton.innerText = '发送评论中...';
     submitButton.setAttribute('disabled', true);
     instance.post(textarea.value.trim()).then(function (data) {
       textarea.value = '';
