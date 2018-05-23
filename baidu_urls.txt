@@ -1,3 +1,4 @@
+http://mrbird.cc/Spring-Boot-Devtools.html
 http://mrbird.cc/Spring-Boot-Admin.html
 http://mrbird.cc/Spring-Boot-Email.html
 http://mrbird.cc/Acutator-Spring-Boot.html
@@ -197,4 +198,3 @@ http://mrbird.cc/Atom编辑器添加酷炫动画.html
 http://mrbird.cc/使用Ajax向服务端传送form表单数据.html
 http://mrbird.cc/Oracle-经典试题集.html
 http://mrbird.cc/Oracle-basis.html
-http://mrbird.cc/Servlet-Jsp-note.html
