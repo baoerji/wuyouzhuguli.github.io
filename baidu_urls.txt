@@ -1,3 +1,4 @@
+http://mrbird.cc/java8lambda1.html
 http://mrbird.cc/Spring-Cloud and MicroService.html
 http://mrbird.cc/Spring-Boot-Devtools.html
 http://mrbird.cc/Spring-Boot-Admin.html
