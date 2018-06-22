@@ -1,3 +1,6 @@
+http://mrbird.cc/java8stream2.html
+http://mrbird.cc/java8stream1.html
+http://mrbird.cc/RHELinstallRuby&RubyGems.html
 http://mrbird.cc/linux-redis-cluster.html
 http://mrbird.cc/java8lambda2.html
 http://mrbird.cc/java8lambda1.html
