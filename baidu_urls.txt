@@ -1,3 +1,4 @@
+http://mrbird.cc/Java8-parallelStream.html
 http://mrbird.cc/java8stream2.html
 http://mrbird.cc/java8stream1.html
 http://mrbird.cc/RHELinstallRuby&RubyGems.html
