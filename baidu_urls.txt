@@ -1,5 +1,5 @@
 http://mrbird.cc/WireMock-mock-RESTful.html
-http://mrbird.cc/Spring-Cloud-Feign- Declarative-REST-Client.html
+http://mrbird.cc/Spring-Cloud-Feign.html
 http://mrbird.cc/Spring-Cloud-Hystrix-Dashboard.html
 http://mrbird.cc/Spring-Cloud-Hystrix-Circuit-Breaker.html
 http://mrbird.cc/Spring-Cloud-Ribbon-LoadBalance.html
