@@ -4,6 +4,10 @@ http://mrbird.cc/Spring-Cloud-Hystrix-Dashboard.html
 http://mrbird.cc/Spring-Cloud-Hystrix-Circuit-Breaker.html
 http://mrbird.cc/Spring-Cloud-Ribbon-LoadBalance.html
 http://mrbird.cc/Spring-Cloud-Eureka.html
+http://mrbird.cc/Spring-Security-SmsCode.html
+http://mrbird.cc/Spring-Security-RememberMe.html
+http://mrbird.cc/Spring-Security-ValidateCode.html
+http://mrbird.cc/Spring-Security-Authentication.html
 http://mrbird.cc/Spring-Boot&Spring-Security.html
 http://mrbird.cc/Spring-Boot-Filter-Interceptor.html
 http://mrbird.cc/Spring-Boot-Exception.html
