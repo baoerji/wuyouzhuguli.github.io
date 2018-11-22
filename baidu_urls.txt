@@ -1,5 +1,6 @@
 http://mrbird.cc/Spring-Boot-Dubbo-Zookeeper.html
 http://mrbird.cc/WireMock-mock-RESTful.html
+http://mrbird.cc/Spring-Cloud-Bus.html
 http://mrbird.cc/Spring-Cloud-Config.html
 http://mrbird.cc/Spring-Cloud-Zuul-Router.html
 http://mrbird.cc/Spring-Cloud-Feign.html
