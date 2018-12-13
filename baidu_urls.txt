@@ -1,3 +1,4 @@
+http://mrbird.cc/Spring-Bean-Regist.html
 http://mrbird.cc/Spring-Boot-Dubbo-Zookeeper.html
 http://mrbird.cc/WireMock-mock-RESTful.html
 http://mrbird.cc/Spring-Cloud-sleuth.html
