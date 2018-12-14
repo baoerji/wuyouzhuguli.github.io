@@ -9,6 +9,7 @@ http://mrbird.cc/Spring-Cloud-Hystrix-Dashboard.html
 http://mrbird.cc/Spring-Cloud-Hystrix-Circuit-Breaker.html
 http://mrbird.cc/Spring-Cloud-Ribbon-LoadBalance.html
 http://mrbird.cc/Spring-Cloud-Eureka.html
+http://mrbird.cc/ES2015-Learn-Note.html
 http://mrbird.cc/Vue-Learn-Note.html
 http://mrbird.cc/Spring-Security-SmsCode.html
 http://mrbird.cc/Spring-Security-RememberMe.html
