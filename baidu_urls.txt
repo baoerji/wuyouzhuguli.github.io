@@ -9,6 +9,8 @@ http://mrbird.cc/deepin-springboot-application.html
 http://mrbird.cc/deepin-springboot-autoconfig.html
 http://mrbird.cc/Spring-Bean-Lifecycle.html
 http://mrbird.cc/Spring-Bean-Regist.html
+http://mrbird.cc/Dubbo-High-Availability.html
+http://mrbird.cc/dubbo-mointor.html
 http://mrbird.cc/Spring-Boot-Dubbo-Zookeeper.html
 http://mrbird.cc/WireMock-mock-RESTful.html
 http://mrbird.cc/Spring-Cloud-sleuth.html
