@@ -1,3 +1,4 @@
+http://mrbird.cc/Spring-Cloud-Consul.html
 http://mrbird.cc/Spring-Boot-Kafka.html
 http://mrbird.cc/Java-9-Flow-API-Learn.html
 http://mrbird.cc/Java10-new-feature-var.html
