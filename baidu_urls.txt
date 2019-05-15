@@ -1,3 +1,11 @@
+http://mrbird.cc/ThreadLocal.html
+http://mrbird.cc/volatile.html
+http://mrbird.cc/JUC-Exchanger.html
+http://mrbird.cc/JUC-CyclicBarrier.html
+http://mrbird.cc/JUC-CountDownLatch.html
+http://mrbird.cc/Java-Memory-model.html
+http://mrbird.cc/Guava-Miscellaneous-notes.html
+http://mrbird.cc/Guava-RateLimiter.html
 http://mrbird.cc/Guava-Cache.html
 http://mrbird.cc/Guava-Collection.html
 http://mrbird.cc/FEBS-Vue-Document.html
