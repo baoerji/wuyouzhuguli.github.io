@@ -48,6 +48,7 @@ http://mrbird.cc/Spring-Cloud-Hystrix-Dashboard.html
 http://mrbird.cc/Spring-Cloud-Hystrix-Circuit-Breaker.html
 http://mrbird.cc/Spring-Cloud-Ribbon-LoadBalance.html
 http://mrbird.cc/Spring-Cloud-Eureka.html
+http://mrbird.cc/Spring-Security-OAuth2-SSO.html
 http://mrbird.cc/ES2015-Learn-Note.html
 http://mrbird.cc/vuex-vuerouter.html
 http://mrbird.cc/Spring-Security-OAuth2-Token-Config.html
